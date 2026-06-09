@@ -1,0 +1,436 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abd Alrhman Nasser — Laravel Back-End Developer</title>
+  <meta name="description" content="Laravel Back-End Developer | Computer Science Student | Cairo, Egypt">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&amp;family=Barlow:wght@300;400;500;600;700&amp;family=Fira+Code:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main id="portfolio-content">
+
+
+    <div class="cur" id="cur-dot">
+      <div class="cur-dot"></div>
+    </div>
+    <div class="cur" id="cur-ring">
+      <div class="cur-ring" id="ring"></div>
+    </div>
+
+    <div id="progress"></div>
+
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#home" class="nav-logo">{<span>AbdAlrhman</span>}</a>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="ham" id="ham"><span></span><span></span><span></span></div>
+      </div>
+      <div class="mobile-nav" id="mobileNav" style="display:none">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="hero-label">Laravel Developer — Portfolio 2025</div>
+      <div class="hero-arc"></div>
+
+      <div class="hero-left">
+        <p class="hero-greeting">hello! <span>—</span> I'm available for work</p>
+        <h1 class="hero-name">
+          I'm <em>Abd Alrhman</em><br>Nasser
+        </h1>
+        <div class="hero-role">
+          <span id="typed"></span><span class="cursor-blink">_</span>
+        </div>
+        <p class="hero-desc">
+          Computer Science student in my <strong>fourth year</strong>, highly passionate about Back-End Development using the Laravel
+          framework. Possess strong foundational knowledge in PHP, databases, and containerization with Docker.
+          Seeking a challenging opportunity or internship to refine my technical expertise, contribute to high-quality
+          software solutions, and gain hands-on production experience.
+        </p>
+        <div class="hero-actions">
+          <a href="assets/cv/abd_alrhman_nasser_CV.pdf" download="" class="btn-cv">
+            <i class="fas fa-arrow-down"></i> Download CV
+          </a>
+          <a href="#contact" class="btn-cv">
+            <i class="fas fa-paper-plane"></i> Let's Talk
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/AbdoNasser23" target="_blank" class="social-ic" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/abdalrhman-nasser-484a05368" target="_blank" class="social-ic" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="code-visual">
+          <div class="code-window">
+            <div class="code-titlebar">
+              <div class="code-dot"></div>
+              <div class="code-dot"></div>
+              <div class="code-dot"></div>
+              <span class="code-filename">TaskController.php</span>
+            </div>
+            <div class="code-body">
+              <div class="code-line"><span class="ln">1</span><span><span class="cm">// Task Management API</span></span></div>
+              <div class="code-line"><span class="ln">2</span><span><span class="kw">class </span><span class="cls">TaskController </span><span class="kw">extends </span><span class="cls">Controller</span></span></div>
+              <div class="code-line"><span class="ln">3</span><span><span class="op">{</span></span></div>
+              <div class="code-line code-glow-line"><span class="ln">4</span><span>&nbsp;&nbsp;<span class="kw">public function </span><span class="fn">index</span><span class="op">()</span></span></div>
+              <div class="code-line"><span class="ln">5</span><span>&nbsp;&nbsp;<span class="op">{</span></span></div>
+              <div class="code-line"><span class="ln">6</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return </span><span class="cls">Task</span><span class="op">::</span><span class="fn">all</span><span class="op">();</span></span></div>
+              <div class="code-line"><span class="ln">7</span><span>&nbsp;&nbsp;<span class="op">}</span></span></div>
+              <div class="code-line"><span class="ln">8</span><span></span></div>
+              <div class="code-line"><span class="ln">9</span><span>&nbsp;&nbsp;<span class="kw">public function </span><span class="fn">store</span><span class="op">(</span><span class="cls">Request </span><span class="var">$request</span><span class="op">)</span></span></div>
+              <div class="code-line"><span class="ln">10</span><span>&nbsp;&nbsp;<span class="op">{</span></span></div>
+              <div class="code-line code-glow-line"><span class="ln">11</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="var">$task</span><span class="op"> = </span><span class="cls">Task</span><span class="op">::</span><span class="fn">create</span><span class="op">([</span></span></div>
+              <div class="code-line code-glow-line"><span class="ln">12</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">'title'</span> <span class="op">=></span> <span class="var">$request</span><span class="op">-></span><span class="fn">title</span><span class="op">,</span></span></div>
+              <div class="code-line code-glow-line"><span class="ln">13</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">'status'</span> <span class="op">=></span> <span class="str">'pending'</span><span class="op">,</span></span></div>
+              <div class="code-line"><span class="ln">14</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="op">]);</span></span></div>
+              <div class="code-line"><span class="ln">15</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return </span><span class="fn">response</span><span class="op">()-></span><span class="fn">json</span><span class="op">(</span><span class="var">$task</span><span class="op">, </span><span class="num">201</span><span class="op">);</span></span></div>
+              <div class="code-line"><span class="ln">16</span><span>&nbsp;&nbsp;<span class="op">}</span></span></div>
+              <div class="code-line"><span class="ln">17</span><span><span class="op">}</span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-chip chip1"><strong>2+</strong> Projects Delivered</div>
+        <div class="hero-chip chip2"><i class="fab fa-php" style="color:#a78bfa;margin-right:.4rem"></i> Laravel Specialist</div>
+        <div class="hero-chip chip3"><strong>4th Year</strong> CS Student</div>
+      </div>
+    </section>
+
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <span class="ticker-item"><i class="fab fa-php"></i>PHP<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-laravel"></i>Laravel<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fas fa-database"></i>MySQL<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-docker"></i>Docker<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-git-alt"></i>Git<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-vuejs"></i>Vue.js<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-js-square"></i>JavaScript<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-html5"></i>HTML5<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-css3-alt"></i>CSS3<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fas fa-cogs"></i>OOP<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fas fa-network-wired"></i>RESTful APIs<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-php"></i>PHP<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-laravel"></i>Laravel<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fas fa-database"></i>MySQL<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-docker"></i>Docker<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-git-alt"></i>Git<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-vuejs"></i>Vue.js<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-js-square"></i>JavaScript<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-html5"></i>HTML5<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fab fa-css3-alt"></i>CSS3<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fas fa-cogs"></i>OOP<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+        <span class="ticker-item"><i class="fas fa-network-wired"></i>RESTful APIs<span class="ticker-sep">&nbsp;/&nbsp;</span></span>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="about-layout">
+          <div class="about-visual reveal-left">
+            <div class="about-card-visual" style="background:var(--surface2); display:flex; flex-direction:column; justify-content:center; padding:2.5rem 2rem; gap:1.5rem;">
+              <div style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.15em;color:var(--violet2);text-transform:uppercase;margin-bottom:.5rem;">// profile.json</div>
+              <div style="display:flex;flex-direction:column;gap:1.1rem;">
+                <div style="display:flex;align-items:center;gap:.9rem;padding:.9rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;">
+                  <i class="fab fa-laravel" style="color:#f05340;font-size:1.2rem;width:22px;text-align:center"></i>
+                  <div><div style="font-size:.75rem;color:var(--white);font-weight:500">Laravel Framework</div><div style="font-size:.65rem;color:var(--gray2);font-family:var(--font-mono)">Primary Stack</div></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:.9rem;padding:.9rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;">
+                  <i class="fas fa-database" style="color:var(--violet2);font-size:1.1rem;width:22px;text-align:center"></i>
+                  <div><div style="font-size:.75rem;color:var(--white);font-weight:500">MySQL & REST APIs</div><div style="font-size:.65rem;color:var(--gray2);font-family:var(--font-mono)">Backend Core</div></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:.9rem;padding:.9rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;">
+                  <i class="fab fa-vuejs" style="color:#42b883;font-size:1.2rem;width:22px;text-align:center"></i>
+                  <div><div style="font-size:.75rem;color:var(--white);font-weight:500">Vue.js</div><div style="font-size:.65rem;color:var(--gray2);font-family:var(--font-mono)">Frontend Layer</div></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:.9rem;padding:.9rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;">
+                  <i class="fab fa-docker" style="color:#2496ed;font-size:1.1rem;width:22px;text-align:center"></i>
+                  <div><div style="font-size:.75rem;color:var(--white);font-weight:500">Docker & Git</div><div style="font-size:.65rem;color:var(--gray2);font-family:var(--font-mono)">DevOps Tools</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="about-num-badge">
+              <span class="num">4+</span>
+              <span class="lbl">Years Coding</span>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <div class="s-tag">About Me</div>
+            <h2 class="s-title">Laravel <em>Back-End</em><br>Developer</h2>
+            <p class="s-sub" style="margin-top:1rem">
+              Hi — I'm <strong style="color:var(--white)">Abd Alrhman Nasser</strong>, a passionate Back-End Developer from Cairo, Egypt,
+              currently in my 4th year pursuing a Bachelor of Computer Science at New Cairo Academy.
+              I specialize in building robust and scalable backends using the <span style="color:var(--violet2)">Laravel framework</span>,
+              with strong foundational knowledge in <span style="color:var(--cyan)">PHP</span>, databases, and containerization with <span style="color:var(--pink)">Docker</span>.
+              I am actively seeking challenging opportunities to refine my technical expertise and contribute to high-quality software solutions.
+            </p>
+
+            <div class="info-rows">
+              <div class="info-row">
+                <i class="fas fa-graduation-cap"></i>
+                <span><strong>Education:</strong> B.Sc. Computer Science — New Cairo Academy (4th Year)</span>
+              </div>
+              <div class="info-row">
+                <i class="fas fa-briefcase"></i>
+                <span><strong>Role:</strong> Laravel Back-End Developer — Self-Projects &amp; Internships</span>
+              </div>
+              <div class="info-row">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>Location:</strong> Egypt, Cairo</span>
+              </div>
+              <div class="info-row">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+201143074598">+20 114 307 4598</a>
+              </div>
+              <div class="info-row">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:AbdAlrhmanNasser20@gmail.com">AbdAlrhmanNasser20@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="about-pills" style="margin-top:2rem">
+              <span class="pill">PHP</span>
+              <span class="pill">Laravel</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">Vue.js</span>
+              <span class="pill">Docker</span>
+              <span class="pill">RESTful APIs</span>
+              <span class="pill">Git &amp; GitHub</span>
+              <span class="pill">OOP</span>
+              <span class="pill">HTML5 &amp; CSS3</span>
+              <span class="pill">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="skills-head">
+          <div class="reveal">
+            <div class="s-tag">Tech Stack</div>
+            <h2 class="s-title">Skills &amp;<br><em>Expertise</em></h2>
+          </div>
+          <div class="skills-head-right reveal">
+            Technologies and tools I use to build robust, scalable back-end applications — from designing RESTful APIs
+            to managing databases and deploying with Docker. I'm always eager to learn and implement best practices.
+          </div>
+        </div>
+
+        <div class="skill-grid reveal">
+          <div class="skill-block">
+            <div class="skill-block-icon"><i class="fab fa-php"></i></div>
+            <h4>Backend Core</h4>
+            <div class="skill-tags-mini">
+              <span class="st">PHP</span><span class="st">Laravel Framework</span>
+              <span class="st">MVC Architecture</span><span class="st">RESTful APIs Design</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <div class="skill-block-icon"><i class="fas fa-database"></i></div>
+            <h4>Databases</h4>
+            <div class="skill-tags-mini">
+              <span class="st">MySQL</span><span class="st">Database Optimization</span>
+              <span class="st">SQL</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <div class="skill-block-icon"><i class="fab fa-docker"></i></div>
+            <h4>DevOps &amp; Tools</h4>
+            <div class="skill-tags-mini">
+              <span class="st">Docker</span><span class="st">Git</span>
+              <span class="st">GitHub</span><span class="st">Linux Basics</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <div class="skill-block-icon"><i class="fas fa-code"></i></div>
+            <h4>Core Concepts</h4>
+            <div class="skill-tags-mini">
+              <span class="st">OOP</span><span class="st">CRUD Operations</span>
+              <span class="st">Authentication</span><span class="st">Data Structures</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <div class="skill-block-icon"><i class="fab fa-vuejs"></i></div>
+            <h4>Frontend</h4>
+            <div class="skill-tags-mini">
+              <span class="st">Vue.js</span><span class="st">JavaScript</span>
+              <span class="st">HTML5</span><span class="st">CSS3</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <div class="skill-block-icon"><i class="fas fa-wrench"></i></div>
+            <h4>Other Relevant</h4>
+            <div class="skill-tags-mini">
+              <span class="st">Web Development</span><span class="st">Software Engineering</span>
+              <span class="st">Database Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="reveal">
+          <div class="s-tag">Featured Work</div>
+          <h2 class="s-title">Selected<br><em>Project</em></h2>
+        </div>
+
+        <div class="project-featured reveal">
+          <div class="project-screen">
+            <div class="project-glow"></div>
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <div class="b-dot"></div>
+                <div class="b-dot"></div>
+                <div class="b-dot"></div>
+                <div class="b-url">task-manager.test/api/tasks</div>
+              </div>
+              <div class="browser-content" style="padding:1.2rem;font-family:'Fira Code',monospace;font-size:.7rem;line-height:1.7;color:#94a3b8;text-align:left;display:block;overflow:hidden;">
+                <div style="color:#4a5568;margin-bottom:.6rem">GET /api/tasks  <span style="color:#34d399">200 OK</span></div>
+                <div><span style="color:#818cf8">{</span></div>
+                <div>&nbsp;&nbsp;<span style="color:#f472b6">"tasks"</span><span style="color:#94a3b8">: [</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#818cf8">{</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f472b6">"id"</span><span style="color:#94a3b8">: </span><span style="color:#fb923c">1</span><span style="color:#94a3b8">,</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f472b6">"title"</span><span style="color:#94a3b8">: </span><span style="color:#34d399">"Build portfolio"</span><span style="color:#94a3b8">,</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f472b6">"status"</span><span style="color:#94a3b8">: </span><span style="color:#34d399">"completed"</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#818cf8">}</span><span style="color:#94a3b8">,</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#818cf8">{</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f472b6">"id"</span><span style="color:#94a3b8">: </span><span style="color:#fb923c">2</span><span style="color:#94a3b8">,</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f472b6">"title"</span><span style="color:#94a3b8">: </span><span style="color:#34d399">"Ship new feature"</span><span style="color:#94a3b8">,</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f472b6">"status"</span><span style="color:#94a3b8">: </span><span style="color:#818cf8">"pending"</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#818cf8">}</span></div>
+                <div>&nbsp;&nbsp;<span style="color:#94a3b8">]</span></div>
+                <div><span style="color:#818cf8">}</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-num">001 / Featured Project</div>
+            <h3 class="project-title">Task Manager<br><em>Laravel REST API</em></h3>
+            <p class="project-desc">
+              A full-featured Task Management REST API built with Laravel and MySQL.
+              Implements complete CRUD operations for tasks, secure user authentication,
+              and clean RESTful routing following MVC architecture best practices.
+            </p>
+            <div class="project-chips">
+              <span class="pchip">Laravel</span>
+              <span class="pchip">MySQL</span>
+              <span class="pchip">RESTful API</span>
+              <span class="pchip">Authentication</span>
+              <span class="pchip">CRUD</span>
+              <span class="pchip">MVC</span>
+            </div>
+            <div class="project-links-row">
+              <a href="https://github.com/AbdoNasser23/Task" target="_blank" class="p-link p-link-primary">
+                <i class="fab fa-github"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-projects-note">
+          <span>More projects available on GitHub</span>
+          <a href="https://github.com/AbdoNasser23" target="_blank">
+            <i class="fab fa-github"></i> github.com/AbdoNasser23
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-layout">
+          <div class="reveal-left">
+            <div class="s-tag">Get In Touch</div>
+            <div class="contact-big-text">
+              Let's<br>work <em>together</em><br>on <span class="hl">something</span><br>great.
+            </div>
+            <p class="contact-note">
+              Have a project in mind, or just want to say hello?
+              I respond within 24 hours — let's build something meaningful.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:AbdAlrhmanNasser20@gmail.com" class="c-link">
+                <i class="fas fa-envelope"></i>
+                <span>AbdAlrhmanNasser20@gmail.com</span>
+              </a>
+              <a href="tel:+201143074598" class="c-link">
+                <i class="fas fa-phone"></i>
+                <span>+20 114 307 4598</span>
+              </a>
+              <a href="https://linkedin.com/in/abdalrhman-nasser-484a05368" target="_blank" class="c-link">
+                <i class="fab fa-linkedin-in"></i>
+                <span>linkedin.com/in/abdalrhman-nasser-484a05368</span>
+              </a>
+              <a href="https://github.com/AbdoNasser23" target="_blank" class="c-link">
+                <i class="fab fa-github"></i>
+                <span>github.com/AbdoNasser23</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <form class="contact-form" action="" method="POST">
+              <div class="form-field">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Your full name">
+              </div>
+              <div class="form-field">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="your@email.com">
+              </div>
+              <div class="form-field">
+                <label>Subject</label>
+                <input type="text" name="subject" placeholder="Project / Collaboration / Hello">
+              </div>
+              <div class="form-field">
+                <label>Message</label>
+                <textarea name="message" placeholder="Tell me about your project..."></textarea>
+              </div>
+              <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Designed &amp; built by <span>Abd Alrhman Nasser</span></p>
+    <p>Laravel Back-End Developer &nbsp;·&nbsp; © 2025</p>
+  </footer>
+  <a href="#home" id="btt" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+
+  <script src="main.js"></script>
+
+
+</body> 
+
+
+</html>
